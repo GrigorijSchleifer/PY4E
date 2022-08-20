@@ -6,3 +6,5 @@ if x < 10:
 if x > 10:
    print(f"X is {x}") 
    print("X is {}".format(x))
+
+print("Cool stuff")
