@@ -1,10 +1,10 @@
-x = 1
+condition = True
 
-if x < 10:
-    print(f"X is {x}")
-    print("X is {}".format(x))
-if x > 10:
-   print(f"X is {x}") 
-   print("X is {}".format(x))
+while condition:
+    try:
+        inp = input("type in a number")
+        inp = int(inp)
+        condition = False 
+    except:
+        print("Should be an integer")
 
-print("Cool stuff")
