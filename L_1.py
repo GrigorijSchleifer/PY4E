@@ -18,7 +18,15 @@ def fct_two(x):
 
 functions_list = [fct_one, fct_two]
 
+
 def chain(value, functions: list) -> int:
+    """
+    Chaining funcitions and use the returned value 
+    in the next called function
+
+    Args: List of functions 
+    return: Integer as a result of both function calls   
+    """
     for i in functions:
         value = i(value)
     return print(value)
