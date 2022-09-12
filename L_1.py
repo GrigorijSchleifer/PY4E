@@ -32,3 +32,24 @@ def chain(value, functions: list) -> int:
     return print(value)
 
 chain(100, functions_list)
+
+# funcition to find largest number in a list
+lst = [2, 4, 33, 5, 65, 345, 1000]
+
+def largest_number(l: list) -> int:
+    """
+    Function to find largest number in a list
+    
+    Args: list
+
+    return: number
+    """
+    max_num = 0
+
+    for itm in l:
+        if itm > max_num:
+            max_num = itm
+    return max_num 
+
+max_number = largest_number(lst)
+print(max_number)
