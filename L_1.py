@@ -33,8 +33,9 @@ def chain(value, functions: list) -> int:
 
 chain(100, functions_list)
 
+
 # funcition to find largest number in a list
-lst = [2, 4, 33, 5, 65, 345, 1000]
+lst = [10, 10, 10, 10, 10, 10, 10]
 
 def largest_number(l: list) -> int:
     """
@@ -51,5 +52,35 @@ def largest_number(l: list) -> int:
             max_num = itm
     return max_num 
 
-max_number = largest_number(lst)
-print(max_number)
+
+def sum_list(l: list) -> int:
+    """
+    Taking in a list and summing up all items 
+
+    Args: list
+
+    return: integer
+    """
+    sum_lst = 0
+    for itm in l:
+        sum_lst += itm 
+    return sum_lst 
+
+sum_list(lst)
+
+
+
+def avg_list(l: list) -> int:
+    """
+    Taking in a list and summing up all items 
+
+    Args: list
+
+    return: integer
+    """
+    sum_lst = 0
+    for itm in l:
+        sum_lst += itm 
+        return sum_lst / len(l)
+
+avg_list(lst)
