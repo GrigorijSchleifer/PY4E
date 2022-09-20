@@ -1,12 +1,12 @@
-chb = open('chatbot.txt')
-chb_chars = chb.read()
+with open('chatbot.txt') as chb:
+    chb_chars = chb.readlines()
+
+print(chb_chars[:10])
 
 line_number = 0
 
-for line in chb:
-   line_number += 1 
-    
-print(line_number)
-print(len(chb_chars))
-print(chb_chars[:20])
+for line in chb_chars:
+    if line.startswith("Warum "):
+        print(line)
+
 
