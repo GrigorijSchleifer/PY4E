@@ -30,3 +30,13 @@ for line in chb_chars:
     else:
         print(line)
 
+class Fruit:
+    def __init__(self, name, clr) -> None:
+        self.name = name
+        self.colour = clr 
+    def details(self):
+        print("my", self.name, "is", self.colour)
+
+my_fruit = Fruit("apple", "yellow")
+print(my_fruit.colour)
+my_fruit.details()
