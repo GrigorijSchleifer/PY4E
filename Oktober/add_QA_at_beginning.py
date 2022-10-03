@@ -8,8 +8,18 @@ try:
         for line in f:
             line = line.rstrip()
             if line.endswith("?"):
-                print(f'Q: {line}') 
+                f.write(f'Q: {line}') 
             else:
-                print(f'A: {line}')
+                f.write(f'A: {line}')
 except FileNotFoundError:
     print('No file found')
+
+
+
+with open("chatbot.txt", "r+") as ff:
+    size_to_read = 10
+
+    text_chunk = ff.read(size_to_read)
+    while len(text_chunk) > 0:
+        print(text_chunk, end='*')
+        text_chunk = ff.read(size_to_read)
