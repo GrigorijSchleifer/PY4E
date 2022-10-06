@@ -1,25 +1,18 @@
 """
-Reading in the Q/As, and adding Q: or A: depending on available "?"
-
+open a file in read mode (only string is returned)
+create a new file in write mode and use the string from the first file
+to write lines into the second file
 """
 try:
-    # r+: read and write mode
-    with open("chatbot.txt", "r+") as f:
-        for line in f:
-            line = line.rstrip()
-            if line.endswith("?"):
-                f.write(f'Q: {line}') 
-            else:
-                f.write(f'A: {line}')
-except FileNotFoundError:
-    print('No file found')
+    with open('chatbot.txt', 'r') as file_to_read:
+        file_read = file_to_read.read().rstrip()
+        # split the string file we just read in on \n
+        file_read_split = file_read.split("\n")
+except FileNotFoundError():
+    print("No such file found")
 
+with open('file_to_write.txt', 'w') as file_to_write:
+    # file_read_trimmed = file_read.rstrip()
 
-
-with open("chatbot.txt", "r+") as ff:
-    size_to_read = 10
-
-    text_chunk = ff.read(size_to_read)
-    while len(text_chunk) > 0:
-        print(text_chunk, end='*')
-        text_chunk = ff.read(size_to_read)
+for line in file_read_trimmed:
+    print(line)
