@@ -13,6 +13,12 @@ except FileNotFoundError():
 
 with open('file_to_write.txt', 'w') as file_to_write:
     # file_read_trimmed = file_read.rstrip()
-
-for line in file_read_trimmed:
-    print(line)
+    for line in file_read_split:
+        if line.endswith('?'):
+            file_to_write.write('Q: ')
+            file_to_write.write(line)
+            file_to_write.write('\n')
+        else:
+            file_to_write.write('A: ')
+            file_to_write.write(line)
+            file_to_write.write('\n')

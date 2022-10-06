@@ -1,0 +1,67 @@
+Q: Warum sind Sie gekommen?
+A: Wegen Fokale Schwäche seit 1 Stunde. Darum hat meine Familie den Rettungsdienst gerufen
+Q: welche Seite?
+A: Sie sind der Doktor, untersuchen Sie das doch (links abgeschwächt)
+Q: Sind Arme und Beine betroffen?
+A: Bin mir nicht sicher (linke Seite ist ganz schwach)
+Q: Ist die Sprache anders?
+A: Ja, die Sprache ist normal
+Q: Ist das Sprechen anders?
+A: Nein
+Q: Hat sich das Sehen verändert?
+A: Geistig ist alles normal, glaube ich
+Q: Hat sich das Gefühl verändert?
+A: Nein, ich habe kein Gefühl der Angst
+Q: Spüren Sie eine Seite weniger als die andere?
+A: Ja, das nehme ich wahr
+Q: Hatten Sie in der letzten Zeit eine Operation?
+A: Ja, ich hatte eine Brachytherapie der Prostata.
+Q: Wann war das?
+A: Vor einer Stunde ganz plötzlich
+Q: Wann war die Brachytherapie der Prostata?
+Q: Hatten Sie in Ihrem Leben eine Operation?
+Q: Hier geht es um Sie! Haben Sie Krebs?
+A: Ich fühle mich nicht gut
+A: Es könnte sein, dass Sie einen Schlaganfall haben, wir machen jetzt ein CT von Ihrem Kopf.
+Q: Sind Sie körperlich gut belastbar?
+Q: Warum sind Sie hier?
+A: Weil ich mit diesen Beschwerden nicht mehr zurechtkomme. Ich habe seit 1 Stunde Fokale Schwäche
+Q: das tut mir Leid. Welche Seite ist betroffen?
+A: Das müssen Sie untersuchen (linke Seite ist ganz schwach)
+Q: Haben sie auch ein abgeschwächtes Gefühl auf dieser Seite?
+A: Nein, ich habe kein Engegefühl auf der Brust
+Q: fühlt sich links und rechts unterschiedlich an?
+A: Ja, ich glaube schon.
+Q: fühlen sie links weniger?
+A: Ich fühle mich nicht wirklich fiebrig
+Q: Haben Sie Angehörige?
+A: Nein, ich habe nicht gespien
+Q: Welchen Tag haben wir heute?
+A: Gute Frage, wie Schleim halt so aussieht
+Q: Welches Jahr haben wir?
+A: Ich habe keine Allergien
+A: Sie haben einen Schlaganfall
+Q: Hatten Sie jemals einen Apoplex?
+A: Nein, aber Sie haben wahrscheinlich jetzt einen.
+Q: Ist das plötzlich aufgetreten?
+A: Deswegen machen wir jetzt ein cCT
+A: Tschüss
+A: Sie müssen hier bleiben
+A: Nein, ich muss kein Blut erbrechen
+A: wir wollen Sie behandeln
+A: Nein, ich war nicht keuchend
+Q: Warum sind Sie hier?
+A: Weil ich mit diesen Beschwerden nicht mehr zurechtkomme. Ich habe seit 1 Stunde Fokale Schwäche
+Q: das tut mir Leid. Welche Seite ist betroffen?
+A: Das müssen Sie untersuchen (linke Seite ist ganz schwach)
+Q: Haben sie auch ein abgeschwächtes Gefühl auf dieser Seite?
+A: Nein, ich habe kein Engegefühl auf der Brust
+Q: fühlt sich links und rechts unterschiedlich an?
+A: Ja, ich glaube schon.
+Q: fühlen sie links weniger?
+A: Ich fühle mich nicht wirklich fiebrig
+Q: Haben Sie Angehörige?
+Q: Welchen Tag haben wir heute?
+A: Sie haben einen Schlaganfall
+Q: Hatten Sie jemals einen Apoplex?
+A: Nein, aber Sie haben wahrscheinlich jetzt einen
