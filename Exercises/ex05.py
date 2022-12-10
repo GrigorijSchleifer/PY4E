@@ -10,3 +10,5 @@ if hours > 40:
     print(f"This will bring you {pay_extra_hours} per hour")
 else:
     print(f"Your payroll will be {hours * pay}")
+
+print("")
