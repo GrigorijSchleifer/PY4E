@@ -7,18 +7,17 @@
 #   >= 0.7    C
 #   >= 0.6    D
 #   < 0.6     F
+def score_grader(grade = None):
+    while True:
+        try:
+            score = float(input("What was your score? \n"))
+            if score < 0 or score > 1:
+                print("Score has to be between 0 and 1 \n")
+                continue
+            break
+        except ValueError:
+            print("Only integers are alowed \n")
 
-while True:
-    try:
-        score = float(input("What was your score? \n"))
-        if score < 0 or score > 1:
-            print("Score has to be between 0 and 1 \n")
-            continue
-        break
-    except ValueError:
-        print("Only integers are alowed \n")
-
-def score_grader(score, grade = None):
     if score >= 0.9:
         grade = "A" 
     elif score >= 0.8:
@@ -31,4 +30,4 @@ def score_grader(score, grade = None):
         grade = "F"
     return grade
 
-print(f'Your score is {score_grader(score, grade=None)}')
+int(f'Your score is {score_grader(grade=None)}')
