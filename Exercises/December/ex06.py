@@ -10,3 +10,5 @@ while True:
         print('Only integers are alowed')
 
 print(f"You will earn {(hours * rate_per_hour) + (extra_hours * extra_hours_ratio)} dollars for your shift")
+
+Ä
