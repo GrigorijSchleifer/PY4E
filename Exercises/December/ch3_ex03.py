@@ -7,6 +7,7 @@
 #   >= 0.7    C
 #   >= 0.6    D
 #   < 0.6     F
+
 def score_grader(grade = None):
     while True:
         try:
@@ -26,8 +27,8 @@ def score_grader(grade = None):
         grade = "C"
     elif score >= 0.6:
         grade = "D"
-    elif score < 0.6:
+    else:
         grade = "F"
     return grade
 
-int(f'Your score is {score_grader(grade=None)}')
+print(f'Your score is {score_grader(grade=None)}')
