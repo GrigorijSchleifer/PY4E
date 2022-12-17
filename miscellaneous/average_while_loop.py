@@ -10,7 +10,8 @@ def collect_input():
     try:
         while True:
             input_variable = input("Your input: \n\n Type \"done\" for exit \n")
-            if input_variable == 'done': break
+            if input_variable == 'done': 
+                break
             lst.append(int(input_variable))
     except ValueError:
         print("Only integers are allowed! ")
