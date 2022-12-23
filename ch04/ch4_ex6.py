@@ -2,6 +2,29 @@
 # create a function called computepay which takes two parameters
 # (hours and rate).
 
+
+def working_pay_alt_intput() -> tuple:
+    """ A method where first input result is not going to be deleted 
+    if second input catches a ValueError exception
+    Args:
+        None
+    Return:
+        tuple (int, int): hours, pay per hour
+    """
+    pay_for = ["Hours", "Pay"]
+    users_input = [0, 0]
+
+    for place_input in range(len(users_input)):
+        while True:
+            try:
+                user_input = int(input(f"{pay_for[place_input]}: "))
+                break
+            except ValueError:
+                print("Only ingegers")
+        users_input[place_input] = user_input
+    # should be unpacked into hour and pay
+    return users_input 
+
 def workhours_pay() -> tuple:
     """ Asking the user for hours worked and pay per hour
     Args:
@@ -36,9 +59,8 @@ def computepay(hours: int, rate: int, over_time: int) -> int:
     """
     return f"{((hours - over_time) * rate) + (over_time * (rate * 1.5))}"
 
-hours, rate = workhours_pay()
+hours, rate = working_pay_alt_intput()
 print(computepay(hours, rate, over_time(hours)))
-
 
 
 
