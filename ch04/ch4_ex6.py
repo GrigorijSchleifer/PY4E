@@ -25,23 +25,6 @@ def working_pay_alt_intput() -> tuple:
     # should be unpacked into hour and pay
     return users_input 
 
-def workhours_pay() -> tuple:
-    """ Asking the user for hours worked and pay per hour
-    Args:
-        None
-    Return:
-        tuple (int, int): hours, pay per hour
-    """
-    while True:
-        try:
-            hours = int(input("How many hours? \n"))
-            rate = int(input("On what rate? \n"))
-            break
-        except ValueError:
-            print("ONLY INTEGERS \n")
-    # no brackets needed 
-    return hours, rate
-
 # how many hours over normal shift
 def over_time(hours: int) -> int:
     regular_shift = 8
