@@ -42,6 +42,7 @@ def computepay(hours: int, rate: int, over_time: int) -> int:
     """
     return f"{((hours - over_time) * rate) + (over_time * (rate * 1.5))}"
 
+# unpacking tuple from the working_pay_alt_intput method
 hours, rate = working_pay_alt_intput()
 print(computepay(hours, rate, over_time(hours)))
 
