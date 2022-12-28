@@ -20,3 +20,4 @@ def min_max_entered_list():
 
 
 min_max_entered_list()
+
