@@ -11,10 +11,13 @@ def inverse_string(string_from_input: str) -> str:
     """
 
     len_string = len(string_from_input)
-    #  
+
+    # print all characters of the input string in reverse order 
     while len_string != 0:
-        print(string_from_input[len_string - 1])
+        reversed_str = ""
+        reversed_str += string_from_input[len_string-1]
         len_string -= 1    
+    return reversed_str
 
 def input_string() -> str:
     while True:
@@ -23,11 +26,14 @@ def input_string() -> str:
             if input_string == "done":
                 break
             else:
-                inverse_string(input_string)
+                inversed_string = inverse_string(input_string)
         except ValueError:
             print("Bad input")
+        return inversed_string
 
-input_string()
+# activating both method to ask for input and reverse it
+print(input_string())
+
 
 
 
