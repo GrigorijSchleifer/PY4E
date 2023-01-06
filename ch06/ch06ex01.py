@@ -13,8 +13,9 @@ def inverse_string(string_from_input: str) -> str:
     len_string = len(string_from_input)
 
     # print all characters of the input string in reverse order 
+    reversed_str = ""
+
     while len_string != 0:
-        reversed_str = ""
         reversed_str += string_from_input[len_string-1]
         len_string -= 1    
     return reversed_str
