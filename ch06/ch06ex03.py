@@ -1,6 +1,8 @@
 # Encapsulate this code in a function named count, and generalize 
 # it so that it accepts the string and the letter as arguments.
 
+count = 0
+
 def ask_for_word():
     while True:
         try:
@@ -21,13 +23,12 @@ def ask_for_char():
             print('Not a character')
         return count_char
 
-def count_char(word, chr):
+def count_char(word, chr, count):
     print(word)
     print(chr)
-    count = 0
     for i in word:
         if i == chr:
-            count += count
+            count += 1
     return count
 
-print(count_char(ask_for_word(), ask_for_char()))
+print(count_char(ask_for_word(), ask_for_char(), count))
