@@ -4,7 +4,7 @@
 # the count of characters to look for will be stored here
 count = 0
 
-def check_for_done_input(inpt):
+def check_if_done(inpt):
     """ 
     Checking if the user wants to quit the loop and enters 'done'
 
@@ -25,7 +25,7 @@ def ask_for_word():
     while True:
         try:
             inp = str(input('What word should we scan for a string? \n'))
-            if check_for_done_input(inp) == False:
+            if check_if_done(inp) == False:
                 break
         except ValueError:
             print('This is not a string')
@@ -35,7 +35,7 @@ def ask_for_char():
     while True:
         try:
             count_char = str(input('What character should we count? \n'))
-            if check_for_done_input(count_char) == False:
+            if check_if_done(count_char) == False:
                 break
         except ValueError:
             print('Not a character')
