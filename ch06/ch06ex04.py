@@ -9,7 +9,7 @@
 def check_if_done(done):
     return True if done == 'done' else False
 
-def count():
+def word_to_count():
     words_for_counting = []
     while True:
         try:
@@ -18,4 +18,6 @@ def count():
                 break
         except ValueError:
             print('Only strings')
+    return words_for_counting[len(words_for_counting)-2]
 
+print(word_to_count().count('a'))
