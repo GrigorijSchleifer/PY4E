@@ -1,0 +1,4 @@
+'X-DSPAM-Confidence:0.8475'
+'X-DSPAM-Confidence:0.9867'
+'X-DSPAM-Confidence:0.2872'
+'X-DSPAM-Confidence:0.0282'
