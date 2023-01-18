@@ -22,10 +22,11 @@ except FileNotFoundError:
     print("No such file found")
 
 with open('file_to_write.txt', 'w') as file_to_write:
-    for line in lines:
+    for line in range(0, len(lines)):
+        print(line)
 
 
-        prefix = 'Q ' if 
+
 
 
 
