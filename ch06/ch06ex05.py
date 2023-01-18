@@ -12,7 +12,7 @@ Goal is to open a file with some text data and filter it by ':'
 with open('file_to_write.txt', 'w') as file_to_write:
     for line in lines:
         prefix = 'Q: ' if line.endswith('?') else 'A: '
-        file_to_write.write(prefix + line + '\n')
+        file_to_write.write(prefix + line + '\n') 
 
 
 try:
@@ -23,7 +23,10 @@ except FileNotFoundError:
 
 with open('file_to_write.txt', 'w') as file_to_write:
     for line in lines:
-        
+
+
         prefix = 'Q ' if 
+
+
 
 
