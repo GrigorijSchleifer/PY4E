@@ -17,4 +17,4 @@ except FileNotFoundError:
 
 with open('file_to_write.txt', 'w') as file_to_write:
     for line in range(0, len(lines)):
-        print(f"For {line.split(':')[0]} the rounded integer is {round(int(lines.split(':')[1]))})")
+        print(f"For {line.split(':')[0]} the rounded integer is {lines.split(':')[1]}")
