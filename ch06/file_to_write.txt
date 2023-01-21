@@ -1,3 +1,0 @@
-For 'X-DSPAM-Confidence we have rounded: 0.9867' 
-For 'X-DSPAM-Confidence we have rounded: 0.2872' 
-For 'X-DSPAM-Confidence we have rounded: 0.0282' 
