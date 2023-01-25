@@ -11,11 +11,14 @@ Goal is to open a file with some text data and filter it by ':'
 
 try:
     with open('data/text_to_modify.txt', 'r') as file_to_read:
-        lines = file_to_read.read().split('\n')
-        print(lines)
+        lines = file_to_read.read().replace('\'', '', 4).split('\n')
 except FileNotFoundError:
     print("No such file found")
 
+# with open('data/file_to_write.txt', 'w') as file_to_write:
+#     for line in range(0, len(lines)):
+#         print(f"For {lines[line].split(':')[0]} the Type of the second input is: {type(lines[line].split(':')[1])}")
+
 with open('data/file_to_write.txt', 'w') as file_to_write:
-    for line in range(0, len(lines)):
-        print(f"For {lines[line].split(':')[0]} the Type of the second input is: {type(lines[line].split(':')[1])}")
+    for ln in lines:
+        print(f'First part: {ln.split(":")[0]} and second part: {round(float(ln.split(":")[1]))}')
