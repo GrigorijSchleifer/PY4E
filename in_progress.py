@@ -19,7 +19,7 @@ except FileNotFoundError:
 #     for line in range(0, len(lines)):
 #         print(f"For {lines[line].split(':')[0]} the Type of the second input is: {type(lines[line].split(':')[1])}")
 
-# Hi to iPad
+# Hey Ho from iPad
 with open('data/file_to_write.txt', 'w') as file_to_write:
     for ln in lines:
         print(f'First part: {ln.split(":")[0]} and second part: {round(float(ln.split(":")[1]))}')
