@@ -12,6 +12,8 @@ Goal is to open a file with some text data and filter it by ':'
 try:
     with open('data/text_to_modify.txt', 'r') as file_to_read:
         lines = file_to_read.read().replace('\'', '', 4).split('\n')
+        for ln in lines:
+            lines_ticks_removed = ln.replace('\'', '', 2)
 except FileNotFoundError:
     print("No such file found")
 
@@ -21,5 +23,5 @@ except FileNotFoundError:
 
 # Hey Ho from iPad
 with open('data/file_to_write.txt', 'w') as file_to_write:
-    for ln in lines:
-        print(f'First part: {ln.split(":")[0]} and second part: {round(float(ln.split(":")[1]))}')
+    for ln_no_ticks in lines_ticks_removed:
+            print('First part: {} and second part: {}'.format(ln_no_ticks.split(":")[0], ln_no_ticks.split(":")[0]))
