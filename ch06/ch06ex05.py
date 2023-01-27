@@ -13,6 +13,7 @@ try:
     """
     open the file, read in and replace '' tics on both ends of the line
     """
+    # this is a context manager that will close the file as soon we leave the code block
     with open('data/text_to_modify.txt', 'r') as file_to_read:
         lines = file_to_read.read().split('\n')
         lines_ticks_removed = [ln.replace('\'', '', 2) for ln in lines]
