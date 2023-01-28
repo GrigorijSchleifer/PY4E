@@ -6,5 +6,5 @@ with open('data/mbox_short.txt') as f:
     rgx = re.compile(r'[Author:]\+')
 
     for itm in f_contents:
-        if re.search(rgx, itm)
-        print(itm)
+        if re.search(rgx, itm):
+            print(itm)
