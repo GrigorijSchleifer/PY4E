@@ -1881,7 +1881,7 @@ X-DSPAM-Result: Innocent
 X-DSPAM-Processed: Thu Jan  3 16:23:48 2008
 X-DSPAM-Confidence: 0.9907
 X-DSPAM-Probability: 0.0000
-
+		
 Details: http://source.sakaiproject.org/viewsvn/?view=rev&rev=39742
 
 Author: cwen@iupui.edu
