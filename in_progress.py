@@ -5,4 +5,4 @@ with open('data/mbox_short.txt') as f:
     f_contents = f.readlines()
     pattern = "Author:"
 
-    print(re.search(pattern, itm))
+    print(re.search(pattern, f_contents))
