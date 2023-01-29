@@ -1,4 +1,7 @@
 # this was weired
-with open('data/file_reading.txt') as f:
+with open('data/mbox_short.txt') as f:
     f_contents = f.readlines()
-    print(f_contents)
+    cnt = 0
+    for ln in f_contents:
+        count =+ 1 
+        print(count) 
