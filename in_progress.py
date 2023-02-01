@@ -5,7 +5,7 @@ def open_file() -> str:
     ask for file name again, if No abort
     """
     # counter for specified search string
-    cnt = 0
+    cnt = 0 
     try:    
         fl_name = input("Tell me the name of the file: ")
         with open(fl_name) as f:
