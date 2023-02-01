@@ -1,25 +1,30 @@
-import re
-
-def open_file(fl_name: str) -> str:
-    # this was weired
-    with open(fl_name) as f:
+# data/mbox_short.txt
+def open_file() -> str:
+    """ Ask for file name and open that file, if file is missing 
+    or not correct name provided, ask for another shot if Yes 
+    ask for file name again, if No abort
+    """
+    # counter for specified search string
+    cnt = 0
+    try:    
         fl_name = input("Tell me the name of the file: ")
-        f_contents = fl_name.readlines()
-        cnt = 0
+        with open(fl_name) as f:
+            f_contents = f.readlines()
         for ln in f_contents:
             ln = ln.rstrip()
             if ln.startswith('From:'):
                 if not ln.startswith('From:'): continue
                 cnt = cnt + 1
+    except:
+        print("File cannot be found")
+        try_again()
     return f'There are {cnt} lines that start with \'From:\''
 
 def try_again():
     yes_or_no = input('Do you want another shot?')
     if yes_or_no.lower() == 'yes':
         open_file()
-try:
-    print(open_file(fl_name))
-except:
-    print("File cannot be found")
-    exit()
+    else:
+        exit()
 
+print(open_file())
