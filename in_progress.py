@@ -1,30 +1,14 @@
-# data/mbox_short.txt
-def open_file() -> str:
-    """ Ask for file name and open that file, if file is missing 
-    or not correct name provided, ask for another shot if Yes 
-    ask for file name again, if No abort
-    """
-    # counter for specified search string
-    cnt = 0 
-    try:    
-        fl_name = input("Tell me the name of the file: ")
-        with open(fl_name) as f:
-            f_contents = f.readlines()
-        for ln in f_contents:
-            ln = ln.rstrip()
-            if ln.startswith('From:'):
-                if not ln.startswith('From:'): continue
-                cnt = cnt + 1
-    except:
-        print("File cannot be found")
-        try_again()
-    return f'There are {cnt} lines that start with \'From:\''
+# where is vimrc for vscode?
 
-def try_again():
-    yes_or_no = input('Do you want another shot?')
-    if yes_or_no.lower() == 'yes':
-        open_file()
-    else:
-        exit()
+from ask_for_file import ask_for_filename, open_file, try_again
 
-print(open_file())
+with open(open_file(ask_for_filename), 'r') as f_r:
+    with open('')
+    
+
+
+
+
+
+
+
