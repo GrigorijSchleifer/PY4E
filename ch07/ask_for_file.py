@@ -1,6 +1,5 @@
 def ask_for_filename():
-    fl_name = input("Tell me the name of the file: ")
-    return fl_name
+    return input("Tell me the name of the file: ")
 
 # data/mbox_short.txt
 def open_file(file_name: str) -> str:
@@ -29,3 +28,5 @@ def try_again():
         open_file(ask_for_filename())
     else:
         exit()
+
+        
