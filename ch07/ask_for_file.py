@@ -1,4 +1,11 @@
 def ask_for_filename():
+<<<<<<< HEAD
+=======
+    """Asking for users input and will be (?invoked?) 
+    Args: 
+    Return: 
+    """
+>>>>>>> origin/main
     return input("Tell me the name of the file: ")
 
 # data/mbox_short.txt
