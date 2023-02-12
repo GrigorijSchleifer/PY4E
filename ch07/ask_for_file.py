@@ -1,18 +1,14 @@
 def ask_for_filename():
-<<<<<<< HEAD
-=======
-    """Asking for users input and will be (?invoked?) 
+    """This method asking for users input and will be (?invoked?) 
     Args: 
     Return: 
     """
->>>>>>> origin/main
     return input("Tell me the name of the file: ")
 
 # data/mbox_short.txt
 def open_file(file_name: str) -> str:
     """ Ask for file name and open that file, if file is missing 
-    or not correct name provided, ask for another shot if Yes 
-    ask for file name again, if No abort
+    or name not correct provided, ask for another shot if Yes ask for file name again, if No abort
     """ 
     # counter for specified search string
     cnt = 0 
