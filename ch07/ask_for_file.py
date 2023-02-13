@@ -16,10 +16,11 @@ def open_file(file_name: str) -> str:
         with open(file_name) as f:
             f_contents = f.readlines()
         for ln in f_contents:
+            # removing white space and blank lines
             ln = ln.rstrip()
-            if ln.startswith('From:'):
-                if not ln.startswith('From:'): continue
-                cnt = cnt + 1
+            if not ln.startswith('From:'): 
+                continue
+            cnt = cnt + 1
     except:
         print("File cannot be found")
         try_again()
@@ -32,4 +33,21 @@ def try_again():
     else:
         exit()
 
-        
+def open_file_find_method(file_name: str) -> str:
+    """A separate method to try out the find method and to help understand 
+    what -1 means if string is not found
+    
+    Args: name of the file
+    Return: A string with lines containing the string
+    """
+    cnt = 0
+    try:
+        with open(file_name) as f:
+            f_contents = f.readlines()
+            for ln in f_contents:
+                ln = ln.rstrip()
+                if ln.find('From:') == -1: continue
+                print(ln)
+    except:
+        print("File not found")
+        try_again()
