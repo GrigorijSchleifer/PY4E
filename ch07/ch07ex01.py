@@ -1,21 +1,23 @@
-import re
+# where is vimrc for v
+from ch07.ask_for_file import ask_for_filename, try_again
 
-def open_file(fl_name: str) -> str:
-    # this was weired
-    with open(fl_name) as f:
-        f_contents = f.readlines()
-        cnt = 0
-        for ln in f_contents:
-            ln = ln.rstrip()
-            if ln.startswith('From:'):
-                if not ln.startswith('From:'): continue
-                cnt = cnt + 1
-    return f'There are {cnt} lines that start with \'From:\''
-    
+f_name = ask_for_filename()
 
-try:
-    fl_name = input("Tell me the name of the file: ")
-    print(open_file(fl_name))
-except:
-    print("File cannot be found")
-    exit()
+def ch07_11_ex_1(file_name: str) -> str:
+    """A separate method to try out the find method and to help understand 
+    what -1 means if string is not found
+
+    Args: name of the file
+    Return: A string with lines containing the string
+    """
+    cnt = 0
+    try:
+        with open(file_name) as f:
+            f_contents = f.readlines()
+            for ln in f_contents:
+                ln = ln.rstrip()
+                if ln.find('From:') == -1: continue
+                print(ln.upper())
+    except:
+        print("File not found")
+        try_again()
