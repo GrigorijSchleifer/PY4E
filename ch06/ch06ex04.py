@@ -14,6 +14,7 @@ def word_to_count():
     while True:
         try:
             words_for_counting.append(str(input('What word do you want \n')))
+            # checks the last input and returners true if its "done"
             if check_if_done(words_for_counting[-1]) == True:
                 break
         except ValueError:

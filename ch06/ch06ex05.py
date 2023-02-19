@@ -1,9 +1,7 @@
 # Take the following Python code that stores a string:
 # str = 'X-DSPAM-Confidence:0.8475'
 # Use find and string slicing to extract the portion of the string after the
-# Use find and string slicing to extract the portion of the string after the
-# colon character and then use the float function to convert the extracted hey
-# hellow from the web editor!
+# colon character and then use the float function to convert the extracted key
 
 """
 Goal is to open a file with some text data and filter it by ':'
