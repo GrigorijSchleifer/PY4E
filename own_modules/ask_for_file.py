@@ -54,12 +54,3 @@ def open_file_find_method(file_name: str) -> str:
         print("File not found")
         try_again()
 
-
-def try_again():
-    yes_or_no = input('Do you want another shot?')
-    if yes_or_no.lower() == 'yes':
-        open_file(ask_for_filename())
-    else:
-        exit()
-
-

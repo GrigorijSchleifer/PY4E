@@ -1,5 +1,5 @@
 # where is vimrc for v
-from ch7.ask_for_file import ask_for_filename, try_again
+from own_modules.ask_for_file import ask_for_filename, try_again
 
 f_name = ask_for_filename()
 
