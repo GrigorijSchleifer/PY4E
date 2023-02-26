@@ -1,13 +1,14 @@
-file_for_modification = "data/mbox_short.txt"
+"""Exercise 1: Write a function called chop that takes a list and modifies
+it, removing the first and last elements, and returns None. Then write
+a function called middle that takes a list and returns a new list that
+contains all but the first and last elements."""
+lst = ["Das", "ist", "cool"]
 
-def open_file_here(file_name: str) -> str:
-    with open(file_name) as f:
-        f = f.readlines()
-        for ln in f:
-            ln = ln.rstrip()
-            if not ln.startswith('X-DSPAM-Processed:'): 
-                continue
-            words = ln.split()
-            print(words[2])
+# token updated
+def chop(lst: list) -> None:
+    lst = lst.append(lst[1:len(lst)-1])
+    return lst
 
-open_file_here(file_for_modification)
+
+
+print(chop(lst))
