@@ -6,7 +6,8 @@
 # create a heuristic for defining the second argument for the open() method
 # make an infinite loop to ask for the second argument of open() and quiting user wants to
 # guard the ln.split() line in case the file is opened as binary not pure text.
-
+def argument_for_open():
+    try
 with open('data/mbox_short.txt') as fhand:
     for ln in fhand:
         words_splitonly = ln.split()
