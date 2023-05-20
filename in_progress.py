@@ -2,7 +2,7 @@
 # properly guarded. See if you can construct a text file which causes the
 # program to fail and then modify the program so that the line is properly
 # guarded and test it to make sure it handles your new text file.
-3
+
 # create a heuristic for defining the second argument for the open() method
 # make an infinite loop to ask for the second argument of open() and quiting user wants to
 # guard the ln.split() line in case the file is opened as binary not pure text.
