@@ -6,20 +6,24 @@
 # create a heuristic for defining the second argument for the open() method
 # make an infinite loop to ask for the second argument of open() and quiting user wants to
 # guard the ln.split() line in case the file is opened as binary not pure text.
-def input_error_generator(inp) -> str:
-    """Evaluating users input and printing the error message 
-    Args: 
-        Whatever is typed in by the user
-    Return:
-        Str: Error message
+
+def choose_mode_for_open():
     """
-    # limit the input to number between 1 - 3
-    if inp in range(1, 2):
-        print(return_mode(inp))
-        return return_mode(inp_mode)
-    else:
+    Ask User to choos the mode that open method will use
+    Args: 
+        No arguments
+    Return:
+        Integer: 1 or 2 (read or binary)
+    """
+    try:
+        print("""Choose the mode for the open method:
+        1: read
+        2: binary
+        """)
+        inp_mode = int(input("Your choice: "))
+    except ValueError:
         print(f"{inp_mode} cannot be used. Please choose the option 1-2 \n")
-        argument_for_open() 
+        choose_mode_for_open()
 
 
 def return_mode(argument: int) -> int:
@@ -35,18 +39,20 @@ def return_mode(argument: int) -> int:
     }
     return argument_dict.get(argument)
 
-def argument_for_open():
-    try:
-        print("""Choose the mode for the open method:
-        1: read
-        2: binary
-        """)
-        inp_mode = int(input("Your choice: "))
-        
-    except ValueError:
+def input_error_generator(inp) -> str:
+    """Evaluating users input and printing the error message 
+    Args: 
+        Whatever is typed in by the user
+    Return:
+        Str: Error message
+    """
+    # limit the input to number between 1 - 3
+    if inp in range(1, 2):
+        print(return_mode(inp))
+        return return_mode(inp_mode)
+    else:
         print(f"{inp_mode} cannot be used. Please choose the option 1-2 \n")
-        argument_for_open()
-
+        argument_for_open() 
 
 
 # argument_for_open() will prompt user to define the mode for the open method
