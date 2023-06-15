@@ -6,4 +6,4 @@ while True:
     except ValueError:
         print('Only integers are alowed')
 
-print(f"You will earn {hours} * {rate_per_hour} dollars for your shift")
+print(f"You will earn {hours * rate_per_hour} dollars for your shift")
