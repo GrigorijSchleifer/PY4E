@@ -1,5 +1,11 @@
-hours = int(input("How many hours did you work today? \n"))
-pay = int(input("What do you earn on an hourly bases? \n"))
+def ask_for_payhoury():
+    while True:
+        try:
+            hours = int(input("How many hours did you work today? \n"))
+            pay = int(input("What do you earn on an hourly bases? \n"))
+            break
+        except ValueError:
+            print("Only integers please")
 
 # if worker does more that 40 hours
 # every extra hour above 40 will be paid with a 1.5 coefficient
