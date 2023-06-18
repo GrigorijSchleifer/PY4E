@@ -1,4 +1,4 @@
-def ask_for_payhoury() -> int:
+def ask_for_payhourly() -> int:
     """Asking for hour worked and pay per our
     Ags:
         No arguments
@@ -15,7 +15,7 @@ def ask_for_payhoury() -> int:
     return hours, pay
 
 # assign hours worked and pay per hour  
-hours, pay = ask_for_payhoury()
+hours, pay = ask_for_payhourly()
 
 # every extra hour above 40 will be paid with a 1.5 coefficient
 extra_hours_coeff = 1.5
@@ -29,9 +29,8 @@ def calculate_pay(hours: int, pay: int, coef: float) -> None:
     Return:
         String: Calculated pay
     """
-    if hours > 40: 
-        pay_extra_hours = (40 * pay) + ((hours - 40) * pay) * coef
-        print(f"This will bring you {pay_extra_hours} per hour")
+    if hours > 40:  
+        print(f"This will bring you {(40 * pay) + ((hours - 40) * pay) * coef} per hour")
     else:
         print(f"Your payroll will be {hours * pay}")
 
