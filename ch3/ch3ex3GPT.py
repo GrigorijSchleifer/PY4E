@@ -27,3 +27,28 @@ def score_grader():
 
 # Call the function and print the result
 print(score_grader())
+
+def enter_restr_byage() -> chr:
+    """Ask user for age and print message in what age group and if allowed to enter
+    Args:
+        No arguments
+    Return:
+        Character"""
+
+    # dict with ages the user will be assigned to
+    age_group = {
+        (0, 18): "Young",
+        (19, 65): "Adults", 
+        (66, 100): "Oldies"
+    }
+    while True:
+        try:
+            age_user = int(input("What is you age? \n"))
+            break
+        except ValueError:
+            print("Only integers are allowed")
+
+    # loop ove3r age groups and find corresponding group wher the user is located
+    for age, group in age_group.items():
+        if age[0] <= age_user <= age[1]:
+            print(f"You are in {group} group")
