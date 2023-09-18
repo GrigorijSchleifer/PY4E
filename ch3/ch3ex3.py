@@ -8,6 +8,15 @@
 #   >= 0.6    D
 #   < 0.6     F
 
+scores_for_grades = {
+    (0,0, 0,5): "F",
+    (0.51, 0.6): "E",
+    (0.61, 0.7): "D", 
+    (0.71, 0.8): "C",
+    (0.81, 0.9): "B",
+    (0.91, 1.0): "A"
+}
+
 def score_grader(grade = None):
     while True:
         try:
@@ -32,3 +41,13 @@ def score_grader(grade = None):
     return grade
 
 print(f'Your score is {score_grader(grade=None)}')
+
+
+def what_class_for_age(ages: dict) -> chr:
+    """Based on users age what class will be attended
+    Args:
+        dict: dictionary of age categories and corresponding grades
+    Return:
+        chr: Text output in what grade user will be"""
+    
+    
