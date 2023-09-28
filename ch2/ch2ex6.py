@@ -11,4 +11,16 @@ while True:
 
 print(f"You will earn {(hours * rate_per_hour) + (extra_hours * extra_hours_ratio)} dollars for your shift")
 
-Ä
+
+def drink_enough():
+    while True:
+        try:
+            winks = int(input("How many liters water do you wink \n"))
+            if winks > 2:
+                print("This is good ")
+            else:
+                print("This is not enough")
+        except ValueError:
+            print("Only integers")
+
+drink_enough()
