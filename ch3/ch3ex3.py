@@ -42,6 +42,14 @@ def score_grader(grade = None):
 
 print(f'Your score is {score_grader(grade=None)}')
 
+age_group = {
+    (0.0, 18.0): "Kids",
+    (18.1, 30.0): "Yound adults",
+    (30.1, 50.0): "Adults",
+    (50.1, 65.0): "Elderly",
+    (65.1, float("inf")): "Old"
+}
+
 
 def what_class_for_age(ages: dict) -> chr:
     """Based on users age what class will be attended
@@ -49,5 +57,13 @@ def what_class_for_age(ages: dict) -> chr:
         dict: dictionary of age categories and corresponding grades
     Return:
         chr: Text output in what grade user will be"""
+    while True:
+        try:
+            age = float(input("Your age: \n"))
+            if age < 0:
+                print("Too young")
+                continue
+        except ValueError:
+            print("Only intgers are allowed")
     
-    
+        
