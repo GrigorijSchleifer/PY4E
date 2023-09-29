@@ -40,7 +40,7 @@ def score_grader(grade = None):
         grade = "F"
     return grade
 
-print(f'Your score is {score_grader(grade=None)}')
+# print(f'Your score is {score_grader(grade=None)}')
 
 age_group = {
     (0.0, 18.0): "Kids",
@@ -50,11 +50,10 @@ age_group = {
     (65.1, float("inf")): "Old"
 }
 
-
-def what_class_for_age(ages: dict) -> chr:
-    """Based on users age what class will be attended
+def what_age_group(ages: dict) -> chr:
+    """Based on users age what age group he/she is? 
     Args:
-        dict: dictionary of age categories and corresponding grades
+        dict: dictionary of age categories and corresponding groups
     Return:
         chr: Text output in what grade user will be"""
     while True:
@@ -63,7 +62,11 @@ def what_class_for_age(ages: dict) -> chr:
             if age < 0:
                 print("Too young")
                 continue
+            for age_range, group in ages.items():
+                if age_range[0] <= age <= age_range[1]:
+                    return group
         except ValueError:
             print("Only intgers are allowed")
+        # looping over categories and finding the group user is in
     
-        
+print(f"Based on your age, you are a {what_age_group(age_group)}")
