@@ -69,4 +69,4 @@ def what_age_group(ages: dict) -> chr:
             print("Only intgers are allowed")
         # looping over categories and finding the group user is in
     
-print(f"Based on your age, you are a {what_age_group(age_group)}")
+print(f"Based on your age, you are: {what_age_group(age_group)}")
