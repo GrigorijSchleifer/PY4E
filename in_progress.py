@@ -1,3 +1,5 @@
+print(__name__)
+
 def get_user_name():
     """
     write a program that uses input to prompt a user for their name and then welcomes them.  
@@ -17,7 +19,7 @@ def greet_user(name: str) -> str:
     returns:
         str: _description_
     """
-    return print(f"hello {name}")
+    return print(f"Hello {name}")
 
 def main():
     user_name = get_user_name()
@@ -25,6 +27,7 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
 
 

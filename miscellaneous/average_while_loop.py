@@ -3,8 +3,10 @@ def collect_input():
     Asking user for a number, if input is not a number,
     catching eception and returning to the input prompt
 
-    Args: no arguments
-    Return: computated average of values in the list
+    Args: 
+        no arguments
+    Return: 
+        str: computated average of values in the list
     """
     lst = list()
     try:
