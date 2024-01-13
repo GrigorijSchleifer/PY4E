@@ -1,49 +1,81 @@
-# gamma calculator
-from typing import List, Any
-
-dct_ctlms = {}
-
-def ask_catecholamins(dct: dict) -> str:
-    """ Asking for catecholamins and flowrates to fill the dct_ctlms  
-
-    Returns:
-        str: _description_
-    """  
-    while True:
-        try:
-            ctlm = input("What catecholamins are running? \n")
-        except ValueError:
-            print("Only characters are allowed")
-        
-        # assign None value to a catecholamine
-        # None will be raplaces in ask_rate()
-        dct[ctlm] = None
-
-        # exiting the loop
-        if ctlm.lower() == 'exit':
-            break
-    
-    return dct 
-
-def ask_rate() -> str:
-    """_summary_
-
-    Returns:
-        str: _description_
-    """    
-    return None
-
-def dspl_ctlms() -> str:
-    """Function asking user for the running catecholamins
-    
-    Args:
-        no arguments, user will provide them into the ctlms dictionary
-
-    Return"
-        ctlms (str): dictionary filled with catecholamins and infusion rate
-
+def get_user_name():
     """
-    return None
+    write a program that uses input to prompt a user for their name and then welcomes them.  
+    args: 
+        no arguments
+    return:
+        str: users name
+    """
+    inp = input("what is your name ?\n")
+    return inp
 
-# use ask_catecholamins to fill the dct_ctlms dict with catecholamins and flowrates
-print(ask_catecholamins(dct_ctlms))
+def greet_user(name: str) -> str:
+    """
+    greets user by their name
+    Args:
+        str: string name from the get_user_name method
+    returns:
+        str: _description_
+    """
+    return print(f"hello {name}")
+
+def main():
+    user_name = get_user_name()
+    greet_user(user_name)
+
+if __name__ == "__main__":
+    main()
+
+
+
+
+
+# # gamma calculator
+# from typing import List, Any
+
+# dct_ctlms = {}
+
+# def ask_catecholamins(dct: dict) -> str:
+    # """ asking for catecholamins and flowrates to fill the dct_ctlms  
+
+    # returns:
+        # str: _description_
+    # """  
+    # while true:
+        # try:
+            # ctlm = input("what catecholamins are running? \n")
+        # except valueerror:
+            # print("only characters are allowed")
+        
+        # # assign none value to a catecholamine
+        # # none will be raplaces in ask_rate()
+        # dct[ctlm] = none
+
+        # # exiting the loop
+        # if ctlm.lower() == 'exit':
+            # break
+    
+    # return dct 
+
+# def ask_rate() -> str:
+    # """_summary_
+
+    # returns:
+        # str: _description_
+    # """    
+    # return none
+
+# def dspl_ctlms() -> str:
+    # """function asking user for the running catecholamins
+    
+    # args:
+        # no arguments, user will provide them into the ctlms dictionary
+
+    # return"
+        # ctlms (str): dictionary filled with catecholamins and infusion rate
+
+    # """
+    # return none
+
+# # use ask_catecholamins to fill the dct_ctlms dict with catecholamins and flowrates
+# print(ask_catecholamins(dct_ctlms))
