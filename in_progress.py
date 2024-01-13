@@ -1,4 +1,6 @@
-print(__name__)
+import ch2.ch2ex2
+
+print(f"Second module is {__name__}")
 
 def get_user_name():
     """
