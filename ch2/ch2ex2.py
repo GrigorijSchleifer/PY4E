@@ -25,5 +25,7 @@ def main():
     user_name = get_user_name()
     greet_user(user_name)
 
+# this shoul not go in every script otherwise it is not clear
+# is this should be run directly or upon import 
 if __name__ == "__main__":
     main()
