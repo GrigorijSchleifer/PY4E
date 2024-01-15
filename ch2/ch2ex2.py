@@ -1,5 +1,6 @@
 print(f"First module is {__name__}")
 
+# Exercise 2: Write a program that uses input to prompt a user for their name and then welcomes them
 def get_user_name():
     """
     write a program that uses input to prompt a user for their name and then welcomes them.  
@@ -25,7 +26,7 @@ def main():
     user_name = get_user_name()
     greet_user(user_name)
 
-# this shoul not go in every script otherwise it is not clear
+# this should not go in every script otherwise it is not clear
 # is this should be run directly or upon import 
 if __name__ == "__main__":
     main()
