@@ -30,7 +30,7 @@ def coeff_extra_hours():
             print("Only integers allowed")
     return coeff_extra_hour
 
-def calculate_pay(hours: int, pay: int, coef: float) -> None:
+def print_pay(hours: int, pay: int, coef: float) -> None:
     """Calculation amd printing pay per hour
     Args:
         hours (int): how many hours were worked
@@ -45,12 +45,15 @@ def calculate_pay(hours: int, pay: int, coef: float) -> None:
         print(f"Your payroll will be {hours * pay}")
 
 def main():
-    """Call 
+    """Collect worked hours and pay per hour firs, than ask for a coefficient and multiply every hour after 40 with that coefficient 
+    Args:
+    Return:
+        str: no return but print statement of the pay
     """
     hours, pay = ask_for_payhourly()
     # every extra hour above 40 will be paid with a 1.5 coefficient
     extra_hours_coeff = coeff_extra_hours()
-    calculate_pay(hours, pay, extra_hours_coeff)
+    print_pay(hours, pay, extra_hours_coeff)
 
 if __name__ == "__main__":
     main()
