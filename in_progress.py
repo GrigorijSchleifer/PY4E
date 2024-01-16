@@ -1,7 +1,33 @@
-import ch2.ch2ex2
+# Exercise 3: Write a program to prompt the user for hours and rate per hour to compute gross pay.
 
-print(f"Second module is {__name__}")
+def hour_and_rate() -> str:
+    """Ask user for hours worked and pay rate per hour
+    Returns:
+        str: Returns hours of work and pay per hour 
+    """
+    while True:
+        try:
+            hours = int(input("how many hour do you work? \n"))
+            rate_hour = int(input("What is you hourly pay? \n"))
+            break
+        except ValueError:
+            print("Only integers allowed")
+    return hours, rate_hour
 
+def print_gross_pay(hours, rate_hour):
+    """Printing the total 
+    Args:
+        hours (str): how many hours worked  
+        rate_hour (str): pay per hour 
+    """
+    print(f"You will earn {hours * rate_hour} dollars")
+
+def main():
+    hours, rate_hour = hour_and_rate()
+    print_gross_pay(hours, rate_hour)
+    
+if __name__ == "__main__":
+       main()
 
 # # gamma calculator
 # from typing import List, Any
@@ -52,9 +78,3 @@ print(f"Second module is {__name__}")
 
 # # use ask_catecholamins to fill the dct_ctlms dict with catecholamins and flowrates
 # print(ask_catecholamins(dct_ctlms))
-
-def main():
-    return "Under construction"
-
-if __name__ == "__main__":
-    main()

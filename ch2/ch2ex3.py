@@ -23,8 +23,8 @@ def print_gross_pay(hours, rate_hour):
     print(f"You will earn {hours * rate_hour} dollars")
 
 def main():
+    hours, rate_hour = hour_and_rate()
+    print_gross_pay(hours, rate_hour)
     
-
-
 if __name__ == "__main__":
-    main()
+       main()
