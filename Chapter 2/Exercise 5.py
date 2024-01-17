@@ -1,59 +1,35 @@
-def ask_for_payhourly() -> int:
-    """Asking for hour worked and pay per our
-    Ags:
-        No arguments
-    Return:
-        Integers for hours worked and pay per hour are returned
-    """
-    while True:
-        try:
-            hours = int(input("How many hours did you work today? \n"))
-            pay = int(input("What do you earn on an hourly bases? \n"))
-            break
-        except ValueError:
-            print("Only integers please")
-    return hours, pay
+# Exercise 5: Write a program which prompts the user for a Celsius temperature, convert the temperature to Fahrenheit, and print out the converted temperature.
+# method for askin a temerature
+def ask_for_temperature():
+    """Asking for temperature
 
-def coeff_extra_hours():
-    """Asking for coefficient for extra hours worked
-    Args:
-        no args
-    Return:
-        coeff_extra_hours (int): coefficient to multiply wiht for every extra hour
+    Returns:
+        temp (float): float number representing temperature in celcius 
     """
     while True:
         try:
-            # every extra hour above 40 will be paid with a 1.5 coefficient
-            coeff_extra_hour = float(input("How many extra hours?"))
+            temp = float(input("What is the temperature? "))
             break
         except ValueError:
             print("Only integers allowed")
-    return coeff_extra_hour
+    return temp
 
-def print_pay(hours: int, pay: int, coef: float) -> None:
-    """Calculation amd printing pay per hour
+
+def convert_print_temperature(temp_celc: float) -> str:
+    """Taking a celius temperature, converting in f. and printing it
+
     Args:
-        hours (int): how many hours were worked
-        pay (int): pay per hour
-        coeff (float): every extra hour above 40 will be paid with a coefficient from coeff_extra_hours
-    Return:
-        String: print calculated pay
+        temp_celc (float): celsius as a floag
+
+    Returns:
+        str: printing fahrenheit number after converting from celsius
     """
-    if hours > 40:  
-        print(f"This will bring you {(40 * pay) + ((hours - 40) * pay) * coef} per hour")
-    else:
-        print(f"Your payroll will be {hours * pay}")
+# method for converting and printing
+    return print(f"It is {(temp_celc * 9/5) + 32} fahrenheit")
 
 def main():
-    """Collect worked hours and pay per hour firs, than ask for a coefficient and multiply every hour after 40 with that coefficient 
-    Args:
-    Return:
-        str: no return but print statement of the pay
-    """
-    hours, pay = ask_for_payhourly()
-    # every extra hour above 40 will be paid with a 1.5 coefficient
-    extra_hours_coeff = coeff_extra_hours()
-    print_pay(hours, pay, extra_hours_coeff)
+    temp_celc = ask_for_temperature()
+    convert_print_temperature(temp_celc)
 
 if __name__ == "__main__":
     main()
