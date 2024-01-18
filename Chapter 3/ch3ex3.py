@@ -1,19 +1,4 @@
-#   Score     Grade
-#   >= 0.9    A
-#   >= 0.8    B
-#   >= 0.7    C
-#   >= 0.6    D
-#   < 0.6     F
-# back in business for MedicalInformatics!!!
-def command():
-    """Write a program to prompt for a score betwween 0.0 and 1.0. If the score is out of range print an error message. 
-    If the score is between 0.0 and 1.0 print a grade using the following table. 
-    
-
-    Returns:
-        _type_: _description_
-    """
-
+# Exercise 3: Write a program to prompt for a score between 0.0 and 1.0. If the score is out of range, print an error message. If the score is between 0.0 and 1.0, print a grade using the following table:
 scores_for_grades = {
     (0,0, 0,5): "F",
     (0.51, 0.6): "E",
@@ -23,30 +8,57 @@ scores_for_grades = {
     (0.91, 1.0): "A"
 }
 
-def score_grader(grade = None):
+def ask_score(grade = None) -> int:
+    """Write a program to prompt for a score betwween 0.0 and 1.0. If the score is out of range print an error message. 
+    If the score is between 0.0 and 1.0 print a grade using the following table. 
+
+    Returns:
+        int: _description_
+    """
     while True:
         try:
             score = float(input("What was your score? \n"))
             if score < 0 or score > 1:
                 print("Score has to be between 0 and 1 \n")
                 continue
+            print(f"Inside the try block the score is {score}")
             break
         except ValueError:
             print("Only integers are alowed \n")
-
-    if score >= 0.9:
-        grade = "A" 
-    elif score >= 0.8:
-        grade = "B"
-    elif score >= 0.7:
-        grade = "C"
-    elif score >= 0.6:
-        grade = "D"
-    else:
-        grade = "F"
+    print(score)
     return grade
 
-# print(f'Your score is {score_grader(grade=None)}')
+def print_score():
+    score = ask_score()
+    return print(f"Your score is {score}")
+
+
+print_score()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 age_group = {
     (0.0, 18.0): "Kids",
@@ -56,7 +68,7 @@ age_group = {
     (65.1, float("inf")): "Old"
 }
 
-def what_age_group(ages: dict) -> chr:
+def what_age_group(age: int) -> chr:
     """Based on users age what age group he/she is? 
     Args:
         dict: dictionary of age categories and corresponding groups

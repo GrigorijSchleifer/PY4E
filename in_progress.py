@@ -1,38 +1,41 @@
-extra_hour_coefficient = 1.5
+# Exercise 3: Write a program to prompt for a score between 0.0 and 1.0. If the score is out of range, print an error message. If the score is between 0.0 and 1.0, print a grade using the following table:
+scores_for_grades = {
+    (0,0, 0,5): "F",
+    (0.51, 0.6): "E",
+    (0.61, 0.7): "D", 
+    (0.71, 0.8): "C",
+    (0.81, 0.9): "B",
+    (0.91, 1.0): "A"
+}
 
-def ask_for_workhours() -> str:
-    """Ask for hours and pay per hour
+def ask_score(grade = None) -> int:
+    """Write a program to prompt for a score betwween 0.0 and 1.0. If the score is out of range print an error message. 
+    If the score is between 0.0 and 1.0 print a grade using the following table. 
 
     Returns:
-        hours_worked, pay_per_hour (str): both hours worked and hourly pay
+        int: _description_
     """
     while True:
         try:
-            hours_worked = int(input("Hours worked \n"))
-            pay_per_hour = int(input("Pay per hour \n"))
+            score = float(input("What was your score? \n"))
+            # this is not really smart and should be handled differently
+            # better to check if score is higher 0 and lower 1 and break if True
+            # but it is nice to see how the keyword "continue" is used inside a try block
+            if score < 0 or score > 1:
+                print("Score has to be between 0 and 1 \n")
+                continue
             break
         except ValueError:
-            print("Only integers allowed")
-    return hours_worked, pay_per_hour 
+            print("Only integers are alowed \n")
+    return score
 
-def print_hourly_pay(hours, pay_per_hour) -> str:
-    """Print pay and use an elif statement to add extra hours multiplied by a coefficient 
+def print_score():
+    score = ask_score()
+    return print(f"Your score is {score}")
 
-    Args:
-        hours (_type_): how many hours worked
-        pay_per_hour (_type_): pay per our 
 
-    Returns:
-        str: print statemt about pay 
-    """
-    if hours < 40:
-        print(f"Your pay: {hours * pay_per_hour}")
-    elif hours > 40:
-        print(f"Your pay: {(hours * pay_per_hour) + ((hours - 40) * (pay_per_hour * extra_hour_coefficient))} ")
+print_score()
 
-def main():
-    hours, pay_per_hour = ask_for_workhours()
-    return print_hourly_pay(hours, pay_per_hour)
 
-if __name__ == "__main__":
-    main()
+
+
