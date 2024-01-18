@@ -1,3 +1,4 @@
+# Exercise 1: Rewrite your pay computation to give the employee 1.5 times the hourly rate for hours worked above 40 hours.
 extra_hour_coefficient = 1.5
 
 def ask_for_workhours() -> str:
@@ -33,3 +34,6 @@ def print_hourly_pay(hours, pay_per_hour) -> str:
 def main():
     hours, pay_per_hour = ask_for_workhours()
     return print_hourly_pay(hours, pay_per_hour)
+
+if __name__ == "__main__":
+    main()

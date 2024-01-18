@@ -1,22 +1,38 @@
-# Exercise 5: Write a program which prompts the user for a Celsius temperature, convert the temperature to Fahrenheit, and print out the converted temperature.
-# method for askin a temerature
-def ask_for_temperature():
+extra_hour_coefficient = 1.5
+
+def ask_for_workhours() -> str:
+    """Ask for hours and pay per hour
+
+    Returns:
+        hours_worked, pay_per_hour (str): both hours worked and hourly pay
+    """
     while True:
         try:
-            temp = float(input("What is the temperature? "))
+            hours_worked = int(input("Hours worked \n"))
+            pay_per_hour = int(input("Pay per hour \n"))
             break
         except ValueError:
             print("Only integers allowed")
-    return temp
+    return hours_worked, pay_per_hour 
 
+def print_hourly_pay(hours, pay_per_hour) -> str:
+    """Print pay and use an elif statement to add extra hours multiplied by a coefficient 
 
-def convert_print_temperature(temp_celc: float) -> str:
-# method for converting and printing
-    return print(f"It is {(temp_celc * 9/5) + 32} fahrenheit")
+    Args:
+        hours (_type_): how many hours worked
+        pay_per_hour (_type_): pay per our 
+
+    Returns:
+        str: print statemt about pay 
+    """
+    if hours < 40:
+        print(f"Your pay: {hours * pay_per_hour}")
+    elif hours > 40:
+        print(f"Your pay: {(hours * pay_per_hour) + ((hours - 40) * (pay_per_hour * extra_hour_coefficient))} ")
 
 def main():
-    temp_celc = ask_for_temperature()
-    convert_print_temperature(temp_celc)
+    hours, pay_per_hour = ask_for_workhours()
+    return print_hourly_pay(hours, pay_per_hour)
 
 if __name__ == "__main__":
     main()
