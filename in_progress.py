@@ -8,7 +8,7 @@ scores_for_grades = {
     (0.91, 1.0): "A"
 }
 
-def ask_score(grade = None) -> int:
+def ask_users_score(grade = None) -> int:
     """Write a program to prompt for a score betwween 0.0 and 1.0. If the score is out of range print an error message. 
     If the score is between 0.0 and 1.0 print a grade using the following table. 
 
@@ -30,7 +30,7 @@ def ask_score(grade = None) -> int:
     return score
 
 def print_score():
-    score = ask_score()
+    score = ask_users_score()
     return print(f"Your score is {score}")
 
 

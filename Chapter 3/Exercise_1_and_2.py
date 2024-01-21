@@ -16,12 +16,12 @@ def ask_for_workhours() -> str:
             print("Only integers allowed")
     return hours_worked, pay_per_hour 
 
-def print_hourly_pay(hours, pay_per_hour) -> str:
+def print_hourly_pay(hours: int, pay_per_hour: int) -> str:
     """Print pay and use an elif statement to add extra hours multiplied by a coefficient 
 
     Args:
-        hours (_type_): how many hours worked
-        pay_per_hour (_type_): pay per our 
+        hours (int): how many hours worked
+        pay_per_hour (int): pay per our 
 
     Returns:
         str: print statemt about pay 
