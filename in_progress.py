@@ -1,5 +1,5 @@
 # Exercise 3: Write a program to prompt for a score_range between 0.0 and 1.0. If the score is out of range, print an error message. If the score is between 0.0 and 1.0, print a grade using the following table:
-score_ranges_for_grades = {
+SCORE_FOR_GRADES = {
     (0.0, 0.5): "F",
     (0.51, 0.6): "E",
     (0.61, 0.7): "D", 
@@ -21,13 +21,12 @@ def ask_score_range() -> float:
             if score < 0 or score > 1:
                 print("score_range has to be between 0 and 1 \n")
                 continue
-            print(f"score_range is {score}")
             break
         except ValueError:
             print("Only integers are alowed \n")
-    return score
+    return score 
 
-def find_grade(score_range: float) -> str:
+def find_grade(range: float) -> str:
     """Take the score_range from ask_score and get the grade associated with this score
 
     Args:
@@ -36,10 +35,9 @@ def find_grade(score_range: float) -> str:
     Returns:
         str: 
     """
-    for range, grade in score_ranges_for_grades.items():
+    for range_score, grade in SCORE_FOR_GRADES.items():
         # if the score_range is inside the range
-        if range[0] <= score_range <= range[1]:
-            print(f"{range[0]} and {range[1]}\n")
+        if range_score[0] <= range <= range_score[1]:
             return grade
 
 def print_grade(grade: str) -> str:
@@ -54,8 +52,8 @@ def print_grade(grade: str) -> str:
     print(f"Your grade is: {grade}")
 
 def main():
-    user_score_range = ask_score()
-    grade = find_grade(user_score_range)
+    user_score = ask_score_range()
+    grade = find_grade(user_score)
     print_grade(grade)
 
 if __name__ == "__main__":
