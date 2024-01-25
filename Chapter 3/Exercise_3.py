@@ -19,7 +19,7 @@ def ask_score_range() -> float:
         try:
             score = float(input("What was your score? \n"))
             if score < 0 or score > 1:
-                print("score_range has to be between 0 and 1 \n")
+                print("Score should to be between 0 and 1 \n")
                 continue
             break
         except ValueError:
