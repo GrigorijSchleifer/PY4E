@@ -6,7 +6,7 @@ Solutions to the exercises for the book, **Python For Everybody: Exploring Data 
 2. [Download the Book](https://www.py4e.com/book)
 
 ## Contents
-1. [Introduction](https://github.com/GrigorijSchleifer/PythonForEverybody/tree/main/Chapter%201)
+1. [Introduction](https://github.com/GrigorijSchleifer/PY4E/tree/main/Chapter%201%20-%20Introduction)
 2. [Variables](https://github.com/GrigorijSchleifer/PythonForEverybody/tree/main/Chapter%202)
 3. [Conditionals](https://github.com/GrigorijSchleifer/PythonForEverybody/tree/main/Chapter%203)
 4. [Functions](https://github.com/GrigorijSchleifer/PythonForEverybody/tree/main/Chapter%204)
