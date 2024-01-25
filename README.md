@@ -22,3 +22,5 @@ Solutions to the exercises for the book, **Python For Everybody: Exploring Data 
 14. [Python Objects]()
 15. [Python Databases]()
 16. [Python Visialisations]()
+
+# what is happening!
