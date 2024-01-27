@@ -24,3 +24,4 @@ Solutions to the exercises for the book, **Python For Everybody: Exploring Data 
 16. [Python Visialisations]()
 
 # what is happening!
+
