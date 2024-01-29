@@ -2,7 +2,6 @@
 # create a function called computepay which takes two parameters
 # (hours and rate).
 
-
 def working_pay_alt_intput() -> tuple:
     """ A method where first input result is not going to be deleted 
     if second input catches a ValueError exception
