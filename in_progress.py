@@ -24,8 +24,14 @@ def asking_pay_and_hours() -> tuple:
     # should be unpacked into hour and pay
     return users_input 
 
-# how many hours over normal shift
 def calculate_overtime(hours: int) -> int:
+    """Returns the number of hours worked beyond 8 hours per shift.
+    Args:
+        hours (int): Hours worked from the asking_pay_and_hours method
+
+    Returns:
+        int: Returns the number of hours worked beyond 8 hours per shift.
+    """
     regular_shift = 8
     return abs(regular_shift - hours)
 
