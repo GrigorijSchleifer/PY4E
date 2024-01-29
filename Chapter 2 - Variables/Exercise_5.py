@@ -25,11 +25,23 @@ def convert_print_temperature(temp_celc: float) -> str:
         str: printing fahrenheit number after converting from celsius
     """
 # method for converting and printing
-    return print(f"It is {(temp_celc * 9/5) + 32} fahrenheit")
+    return (temp_celc * 9/5) + 32 
+
+def print_temperature(temp_fahr):
+    """Takes the string of the temperature in fahrenheit and prints it
+
+    Args:
+        temp_fahr (str): temperature in fahrenheit 
+
+    Returns:
+        str: printed message that displays the temperature in fahrenheit
+    """
+    return print(f"It is {temp_fahr} fahrenheit")
 
 def main():
     temp_celc = ask_for_temperature()
-    convert_print_temperature(temp_celc)
-
+    temp_fahr = convert_print_temperature(temp_celc)
+    print_temperature(temp_fahr)
+    
 if __name__ == "__main__":
     main()

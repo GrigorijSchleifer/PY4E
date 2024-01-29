@@ -1,66 +1,47 @@
-# Exercise 3: Write a program to prompt for a score_range between 0.0 and 1.0. If the score is out of range, print an error message. If the score is between 0.0 and 1.0, print a grade using the following table:
-SCORE_FOR_GRADES = {
-    (0.0, 0.5): "F",
-    (0.51, 0.6): "E",
-    (0.61, 0.7): "D", 
-    (0.71, 0.8): "C",
-    (0.81, 0.9): "B",
-    (0.91, 1.0): "A"
-}
-
-def ask_score_range() -> float:
-    """Write a program to prompt for a score_range betwween 0.0 and 1.0. If the score is out of range print an error message. 
-    If the score_range is between 0.0 and 1.0 print a grade using the following table. 
+# Exercise 5: Write a program which prompts the user for a Celsius temperature, convert the temperature to Fahrenheit, and print out the converted temperature.
+# method for askin a temerature
+def ask_for_temperature():
+    """Asking for temperature
 
     Returns:
-        int: _description_
+        temp (float): float number representing temperature in celcius 
     """
     while True:
         try:
-            score = float(input("What was your score? \n"))
-            if score < 0 or score > 1:
-                print("score_range has to be between 0 and 1 \n")
-                continue
+            temp = float(input("What is the temperature? "))
             break
         except ValueError:
-            print("Only integers are alowed \n")
-    return score 
+            print("Only integers allowed")
+    return temp
 
-def find_grade(range: float) -> str:
-    """Take the score_range from ask_score and get the grade associated with this score
 
-    Args:
-        score_range (float): the score from the ask_score method
-
-    Returns:
-        str: 
-    """
-    for range_score, grade in SCORE_FOR_GRADES.items():
-        # if the score_range is inside the range
-        if range_score[0] <= range <= range_score[1]:
-            return grade
-
-def print_grade(grade: str) -> str:
-    """Takes the grade (ask_score_range -> find_grade) and prints it 
+def convert_print_temperature(temp_celc: float) -> str:
+    """Taking a celius temperature, converting in f. and printing it
 
     Args:
-        grade (chr): the grade from the find_grade method 
+        temp_celc (float): celsius as a floag
 
     Returns:
-        chr: Prints the grade 
+        str: printing fahrenheit number after converting from celsius
     """
-    print(f"Your grade is: {grade}")
+# method for converting and printing
+    return (temp_celc * 9/5) + 32 
+
+def print_temperature(temp_fahr):
+    """Takes the string of the temperature in fahrenheit and prints it
+
+    Args:
+        temp_fahr (str): temperature in fahrenheit 
+
+    Returns:
+        str: printed message that displays the temperature in fahrenheit
+    """
+    return print(f"It is {temp_fahr} fahrenheit")
 
 def main():
-    user_score = ask_score_range()
-    grade = find_grade(user_score)
-    print_grade(grade)
-
+    temp_celc = ask_for_temperature()
+    temp_fahr = convert_print_temperature(temp_celc)
+    print_temperature(temp_fahr)
+    
 if __name__ == "__main__":
     main()
-
-
-
-
-
-

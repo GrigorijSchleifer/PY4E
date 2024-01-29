@@ -18,8 +18,8 @@ def ask_score_range() -> float:
     while True:
         try:
             score = float(input("What was your score? \n"))
-            if score < 0 or score > 1:
-                print("Score should to be between 0 and 1 \n")
+            if not 0 <= score <= 1: 
+                print("Score must to be between 0 and 1 \n")
                 continue
             break
         except ValueError:
