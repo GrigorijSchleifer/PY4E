@@ -1,52 +1,73 @@
-# rewrite your pay computation with time-and-a-half for over time and 
-# create a function called computepay which takes two parameters
-# (hours and rate).
+# Rewrite the grade program from the previous chapter using
+# a function called computegrade that takes a score as its parameter and
+# returns a grade as a string.
+#   Score   Grade
+#   >= 0.9  A
+#   >= 0.8  B
+#   >= 0.7  C
+#   >= 0.6  D
+#   < 0.6   F
 
-def asking_pay_and_hours() -> tuple:
-    """ alternative method using a list to be filled with users input 
-    args:
-        none
-    return:
-        tuple (int, int): hours, pay per hour
+SCORE_GRADES = {
+    (1.0, 0.9): 'A',
+    (0.89, 0.8): 'B',
+    (0.79, 0.7): 'C', 
+    (0.69, 0.6): 'D',
+    (0.59, 0.0): 'F'
+}
+
+def ask_for_score() -> int:
+    """Asking user to enter the grade, checks if "grade" is a number and is outside the ranges of SCORE_GRADE ckeck_score_validity 
+
+    Returns:
+        int: Only the score as integer
     """
-    pay_for = ["hours", "pay"]
-    users_input = [0, 0]
-
-    for place_input in range(len(users_input)):
-        while True:
-            try:
-                user_input = int(input(f"{pay_for[place_input]}: "))
-                # this is needed because otherwise pay will be asked indefinitely
+    while True:
+        try:
+            score = float(input("Your score: \n"))
+            # check if the score is outside 0-1 and return False if not
+            if check_score_validity(score) == True:
                 break
-            except ValueError:
-                print("only integers")
-        users_input[place_input] = user_input
-    # should be unpacked into hour and pay
-    return users_input 
+        except ValueError:
+            print("Only integers allowed")
+    return score
 
-def calculate_overtime(hours: int) -> int:
-    """returns the number of hours worked beyond 8 hours per shift.
-    args:
-        hours (int): hours worked from the asking_pay_and_hours method
+def check_score_validity(score: int) -> bool:
+    """If the score is outside 0-1 range method returns False
 
-    returns:
-        int: returns the number of hours worked beyond 8 hours per shift.
+    Args:
+        score (int): users score from the ask_for_score method
+
+    Returns:
+        bool: If False is returned while loop in ask_for_score() askes another score
     """
-    regular_shift = 8
-    return abs(regular_shift - hours)
+    if not 0 <= score <= 1:
+        print(f"{score} is outside the range")
+        return False
+    else:
+        return True
 
-def computepay(hours: int, rate: int) -> int:
-    """ product of hours worked * rate + over time hours (coefficient of 1.5)
-    args:
-    hours {int}: hours worked
-    rate {int}: rate per hour
-    return:
+def assign_grade(score_user: float) -> str:
+    """Takes users score and matches it to the drade from SCORE_GRADES
+
+    Args:
+        score_user (int): _description_
+
+    Returns:
+        str: _description_
     """
-    return f"{((hours - calculate_overtime(hours)) * rate) + (calculate_overtime(hours) * (rate * 1.5))}"
+    print(f"The score we recieved is {score_user}")
 
-def main():
-    hours, rate = asking_pay_and_hours()
-    print(computepay(hours, rate))
+    for score_range, grade in SCORE_GRADES.items():
+        print(f"score : {score_range}, users_score: {score_user}, grade: {grade}")
+        if score_range[0] <= score_user <= score_range[1]:
+            print(f"THE grade is : {grade}")
+        return grade
+
+def print_grade_msg(grade: str) -> str:
+    print(f"The grade is {grade}")
 
 if __name__ == "__main__":
-    main()
+    user_score = ask_for_score()
+    grade = assign_grade(user_score)
+    print_grade_msg(grade)

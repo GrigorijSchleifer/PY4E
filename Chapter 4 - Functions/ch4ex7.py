@@ -17,18 +17,39 @@ SCORE_GRADES = {
 }
 
 def ask_for_score() -> int:
+    """Asking user to enter the grade, check if it is a number and if it is outside the grade
+    invoking the ckeck_score_validity
+
+    Returns:
+        int: Only the score as integer
+    """
     while True:
         try:
             score = int(input("Your score: \n"))
-            break
+            # check if the score is outside 0-1 and return False if not
+            if check_score_validity(score) == True:
+                print("Score is outside the range")
+                break
         except ValueError:
             print("Only integers allowed")
     return score
 
+def check_range_of_score(score: int) -> bool:
+    """If the score is outside 0-1 range method returns False
+
+    Args:
+        score (int): users score from the ask_for_score method
+
+    Returns:
+        bool: If False is returned while loop in ask_for_score() askes another score
+    """
+    if 0 < score > 1:
+        return False
+    else:
+        return True
 
 def check_grade(score_user: int) -> str:
     """Takes users score and matches it to the drade from SCORE_GRADES
-    If users score is in the range of  
 
     Args:
         score_user (int): _description_
@@ -41,29 +62,3 @@ def check_grade(score_user: int) -> str:
             return grade
         break
 
-
-
-def score_grader(grade = None):
-    while True:
-        try:
-            score = float(input("What was your score? \n"))
-            if score < 0 or score > 1:
-                print("Score has to be between 0 and 1 \n")
-                continue
-            break
-        except ValueError:
-            print("Only integers are alowed \n")
-
-    if score >= 0.9:
-        grade = "A" 
-    elif score >= 0.8:
-        grade = "B"
-    elif score >= 0.7:
-        grade = "C"
-    elif score >= 0.6:
-        grade = "D"
-    else:
-        grade = "F"
-    return grade
-
-print(f'Your score is {score_grader(grade=None)}')

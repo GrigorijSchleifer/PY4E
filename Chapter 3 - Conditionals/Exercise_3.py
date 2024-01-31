@@ -26,7 +26,7 @@ def ask_score_range() -> float:
             print("Only integers are alowed \n")
     return score 
 
-def find_grade(range: float) -> str:
+def find_grade(user_score: float) -> str:
     """Take the score_range from ask_score and get the grade associated with this score
 
     Args:
@@ -37,7 +37,7 @@ def find_grade(range: float) -> str:
     """
     for range_score, grade in SCORE_FOR_GRADES.items():
         # if the score_range is inside the range
-        if range_score[0] <= range <= range_score[1]:
+        if range_score[0] <= user_score <= range_score[1]:
             return grade
 
 def print_grade(grade: str) -> str:
