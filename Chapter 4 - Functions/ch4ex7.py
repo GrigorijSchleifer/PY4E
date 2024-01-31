@@ -34,7 +34,7 @@ def ask_for_score() -> int:
             print("Only integers allowed")
     return score
 
-def check_range_of_score(score: int) -> bool:
+def check_score_validity(score: int) -> bool:
     """If the score is outside 0-1 range method returns False
 
     Args:

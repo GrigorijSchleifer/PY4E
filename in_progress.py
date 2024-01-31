@@ -59,7 +59,8 @@ def assign_grade(score_user: float) -> str:
     print(f"The score we recieved is {score_user}")
 
     for score_range, grade in SCORE_GRADES.items():
-        print(f"score : {score_range}, users_score: {score_user}, grade: {grade}")
+        print(f"score range: {score_range}, users_score: {score_user}, grade: {grade}")
+
         if score_range[0] <= score_user <= score_range[1]:
             print(f"THE grade is : {grade}")
         return grade
