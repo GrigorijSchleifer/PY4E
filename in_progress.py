@@ -8,12 +8,13 @@
 #   >= 0.6  D
 #   < 0.6   F
 
-SCORE_GRADES = {
-    (1.0, 0.9): 'A',
-    (0.89, 0.8): 'B',
-    (0.79, 0.7): 'C', 
-    (0.69, 0.6): 'D',
-    (0.59, 0.0): 'F'
+SCORE_FOR_GRADES = {
+    (0.0, 0.5): "F",
+    (0.51, 0.6): "E",
+    (0.61, 0.7): "D", 
+    (0.71, 0.8): "C",
+    (0.81, 0.9): "B",
+    (0.91, 1.0): "A"
 }
 
 def ask_for_score() -> int:
@@ -56,14 +57,13 @@ def assign_grade(score_user: float) -> str:
     Returns:
         str: _description_
     """
-    print(f"The score we recieved is {score_user}")
-
-    for score_range, grade in SCORE_GRADES.items():
-        print(f"score range: {score_range}, users_score: {score_user}, grade: {grade}")
+    for score_range, grade in SCORE_FOR_GRADES.items():
+        print(f"first score range: {score_range[0]} score_user: {score_user} grade: {grade}")
 
         if score_range[0] <= score_user <= score_range[1]:
             print(f"THE grade is : {grade}")
-        return grade
+            return grade
+        
 
 def print_grade_msg(grade: str) -> str:
     print(f"The grade is {grade}")
