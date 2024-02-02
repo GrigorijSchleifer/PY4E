@@ -1,74 +1,77 @@
-# Rewrite the grade program from the previous chapter using
-# a function called computegrade that takes a score as its parameter and
-# returns a grade as a string.
-#   Score   Grade
-#   >= 0.9  A
-#   >= 0.8  B
-#   >= 0.7  C
-#   >= 0.6  D
-#   < 0.6   F
+# Exercise 3: Write a program to prompt for a score_range between 0.0 and 1.0. If the score is out of range, print an error message. If the score is between 0.0 and 1.0, print a grade using the following table:
 
-SCORE_FOR_GRADES = {
-    (0.0, 0.5): "F",
-    (0.51, 0.6): "E",
-    (0.61, 0.7): "D", 
-    (0.71, 0.8): "C",
-    (0.81, 0.9): "B",
-    (0.91, 1.0): "A"
-}
+import data.constants as constants
 
-def ask_for_score() -> int:
-    """Asking user to enter the grade, checks if "grade" is a number and is outside the ranges of SCORE_GRADE ckeck_score_validity 
+# dictionary containing score range and corresponding grade
+SCORE_AND_GRADES = constants.SCORE_AND_GRADES
+
+def ask_score_range() -> float:
+    """Write a program to prompt for a score_range betwween 0.0 and 1.0. If the score is out of range print an error message. 
+    If the score_range is between 0.0 and 1.0 print a grade using the following table. 
 
     Returns:
-        int: Only the score as integer
+        int: _description_
     """
     while True:
         try:
-            score = float(input("Your score: \n"))
-            # check if the score is outside 0-1 and return False if not
-            if check_score_validity(score) == True:
-                break
+            score = float(input("What was your score? \n"))
+            if not 0 <= score <= 1: 
+                print("Score must to be between 0 and 1 \n")
+                continue
+            break
         except ValueError:
-            print("Only integers allowed")
-    return score
+            print("Only integers are alowed \n")
+    return score 
 
-def check_score_validity(score: int) -> bool:
-    """If the score is outside 0-1 range method returns False
-
-    Args:
-        score (int): users score from the ask_for_score method
-
-    Returns:
-        bool: If False is returned while loop in ask_for_score() askes another score
-    """
-    if not 0 <= score <= 1:
-        print(f"{score} is outside the range")
-        return False
-    else:
-        return True
-
-def assign_grade(score_user: float) -> str:
-    """Takes users score and matches it to the drade from SCORE_GRADES
+def find_grade(user_score: float) -> str:
+    """Take the score_range from ask_score and get the grade associated with this score
 
     Args:
-        score_user (int): _description_
+        score_range (float): the score from the ask_score method
 
     Returns:
-        str: _description_
+        str: 
     """
-    for score_range, grade in SCORE_FOR_GRADES.items():
-        print(f"first score range: {score_range[0]} score_user: {score_user} grade: {grade}")
-
-        if score_range[0] <= score_user <= score_range[1]:
-            print(f"THE grade is : {grade}")
+    for range_score, grade in SCORE_AND_GRADES.items():
+        # if the score_range is inside the range
+        if range_score[0] <= user_score <= range_score[1]:
             return grade
-        
 
-def print_grade_msg(grade: str) -> str:
-    print(f"The grade is {grade}")
+def print_grade(grade: str) -> str:
+    """Takes the grade (ask_score_range -> find_grade) and prints it 
+
+    Args:
+        grade (chr): the grade from the find_grade method 
+
+    Returns:
+        chr: Prints the grade 
+    """
+    print(f"Your grade is: {grade}")
+
+def main():
+    user_score = ask_score_range()
+    grade = find_grade(user_score)
+    print_grade(grade)
 
 if __name__ == "__main__":
-    user_score = ask_for_score()
-    grade = assign_grade(user_score)
-    print_grade_msg(grade)
+    main()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

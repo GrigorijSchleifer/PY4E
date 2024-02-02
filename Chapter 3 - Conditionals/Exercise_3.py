@@ -1,12 +1,9 @@
 # Exercise 3: Write a program to prompt for a score_range between 0.0 and 1.0. If the score is out of range, print an error message. If the score is between 0.0 and 1.0, print a grade using the following table:
-SCORE_FOR_GRADES = {
-    (0.0, 0.5): "F",
-    (0.51, 0.6): "E",
-    (0.61, 0.7): "D", 
-    (0.71, 0.8): "C",
-    (0.81, 0.9): "B",
-    (0.91, 1.0): "A"
-}
+
+import data.constants as constants
+
+# dictionary containing score range and corresponding grade
+SCORE_FOR_GRADES = constants.SSCORE_FOR_GRADES
 
 def ask_score_range() -> float:
     """Write a program to prompt for a score_range betwween 0.0 and 1.0. If the score is out of range print an error message. 
